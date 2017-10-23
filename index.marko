@@ -59,7 +59,7 @@
         }
 
         .skuset {
-            height: 100px;
+            height: 150px;
             background-color: #FAFAFA;
             border-bottom: 2px solid #E8E8E8;
             width: 100%;
@@ -209,8 +209,8 @@
             padding-top: 20px;
         }
 
-        .size,
-        .color {
+        .size-grid,
+        .color-grid {
             width: 100%;
             padding: 10px;
             font-family: sans-serif;
@@ -218,12 +218,19 @@
             font-size: 15px;
             font-weight: 500;
             margin-top: 5px;
+            height:75px;
         }
         .nykaa-grid, .amazon-grid, .bb-grid{
             width:70px;
             height:80px;
             float:left;
             padding-left: 25px;
+        }
+        .size-title, .color-title{
+            float: left;
+            margin-left: 10px;
+            padding: 10px 0 10px 0;
+
         }
     </style>
 </head>
@@ -247,10 +254,14 @@
                 <a class="carousel-item"><img class="product-img" src="assets/images/Loreal-3.jpg"></a>
             </div>
             <div class="skuset">
-                <div class="size">
-                    Size
+                <div class="size-grid">
+                <div class="size-title">Size</div>
+                <div class= "size-title">150 ml</div>
+                <div class="size-title">400 ml</div>
                 </div>
-                <div class="color">Color</div>
+                <div class="color-grid">
+                <div class="color-title">Color</div>
+                </div>
             </div>
             <div class="merchants-grid">
                 <div class="merchants-grid-title">Buy Now</div>
