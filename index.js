@@ -8,6 +8,7 @@ var template = require('./index.marko');
 var mobileTemplate = require('./pdp-mobile.marko');
 
 // Configure lasso
+/*
 require('lasso').configure({
     plugins: [
         'lasso-marko' // Allow Marko templates to be compiled and transported to the browser
@@ -16,6 +17,7 @@ require('lasso').configure({
 });
 
 app.use(require('lasso/middleware').serveStatic());
+*/
 app.use("/assets", express.static(__dirname + '/assets'));
 app.use(markoExpress()); //enable res.marko(template, data)
 

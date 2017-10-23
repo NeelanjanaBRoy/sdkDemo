@@ -8,18 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.sticky.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#sticker').sticky({ bottomSpacing: 0 });
-            $('#sticker').on('sticky-start', function () { console.log("Started"); });
-            $('#sticker').on('sticky-end', function () { console.log("Ended"); });
-            $('#sticker').on('sticky-update', function () { console.log("Update"); });
-            $('#sticker').on('sticky-bottom-reached', function () { console.log("Bottom reached"); });
-            $('#sticker').on('sticky-bottom-unreached', function () { console.log("Bottom unreached"); });
-        });
-
-    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
             height: 800px;
@@ -57,8 +46,12 @@
             color: #2A2A2A;
         }
 
-        .image-gallery {
+        .image-carousel {
             height: 400px;
+        }
+        .product-img{
+            padding:10px;
+            width: 250px;
         }
 
         .skuset {
@@ -222,9 +215,19 @@
             margin-top: 5px;
         }
     </style>
+        <script>
+        $(document).ready(function () {
+            $('.carousel.carousel-slider').carousel({
+            dist:0,
+            shift:0,
+            padding:20,
+            fullWidth: true,
+        });
+        });
+    </script>
 </head>
-
 <body>
+
     <div class="row">
         <div class="pdp-header">
             <div class="shop">
@@ -237,7 +240,11 @@
             </div>
         </div>
         <div class="col s5">
-            <div class="image-gallery"></div>
+            <div class="carousel carousel-slider">
+                <a class="carousel-item"><img class="product-img" src="assets/images/Loreal-1.png"></a>
+                <a class="carousel-item"><img class="product-img" src="assets/images/loreal-2.jpg"></a>
+                <a class="carousel-item"><img class="product-img" src="assets/images/Loreal-3.jpg"></a>
+            </div>
             <div class="skuset">
                 <div class="size">
                     Size
