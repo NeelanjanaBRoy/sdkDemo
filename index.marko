@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
-            height: 800px;
+            height: 750px;
         }
 
         .pdp-header {
@@ -31,6 +31,10 @@
 
         .shop-text {
             margin-top: 16px;
+        }
+        .merchant-text {
+            width:70px;
+            text-align:center;
         }
 
         .icons {
@@ -64,17 +68,18 @@
         .merchants-grid {
             height: 300px;
             background-color: #FAFAFA;
+            margin:auto;
 
         }
 
         .merchants-grid-title {
             width: 100%;
-            padding: 10px;
+            padding: 25px 25px 15px 25px;
             font-family: sans-serif;
             font-size: 17px;
             font-weight: 500;
             color: #747474;
-            padding-top: 20px;
+           
         }
 
         .pd-grid {
@@ -214,17 +219,13 @@
             font-weight: 500;
             margin-top: 5px;
         }
+        .nykaa-grid, .amazon-grid, .bb-grid{
+            width:70px;
+            height:80px;
+            float:left;
+            padding-left: 25px;
+        }
     </style>
-        <script>
-        $(document).ready(function () {
-            $('.carousel.carousel-slider').carousel({
-            dist:0,
-            shift:0,
-            padding:20,
-            fullWidth: true,
-        });
-        });
-    </script>
 </head>
 <body>
 
@@ -253,6 +254,22 @@
             </div>
             <div class="merchants-grid">
                 <div class="merchants-grid-title">Buy Now</div>
+                <div class="nykaa-grid" >
+                <img class="merchant-img" width="57" height="50" src="assets/images/nykaa.png">
+                <div class="merchant-text">Nykaa</div>
+                <div class="merchant-text">${input.productPrice}</div>
+                </div>
+                <div class="amazon-grid" >
+                <img class="merchant-img" width="57" height="50" src="assets/images/amazon-shopping.png">
+                <div class="merchant-text">Amazon</div>
+                <div class="merchant-text">${input.productPrice}</div>
+                </div>
+                <div class="bb-grid">
+                <img class="merchant-img" width="57" height="50" src="assets/images/bb.jpg">
+                <div class="merchant-text">BigBasket</div>
+                <div class="merchant-text">${input.productPrice}</div>
+
+                </div>
             </div>
         </div>
         <div class="col s7 pd-grid">
@@ -297,6 +314,12 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+            $('.carousel-slider').slider({full_width: true});
+        });
+    </script>
 </body>
 
 </html>
